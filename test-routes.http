@@ -1,0 +1,49 @@
+# Category routes
+### Get all categories
+GET http://localhost:8080/category HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+### Get a category by id
+GET http://localhost:8080/category/{id} HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+### Create a category 
+POST http://localhost:8080/category HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "name": "Category 1",
+  "description": "Category 1 description"
+}
+
+# Product routes
+### Get all products
+GET http://localhost:8080/product HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+### Get a product by category_id
+GET http://localhost:8080/product/category/{categoryID} HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+### Get a product by id
+GET http://localhost:8080/product/{id} HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+### Create a product
+POST http://localhost:8080/product HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "name": "product 1 name",
+  "description": "product 1 description",
+  "image_url": "image_url",
+  "category_id": "category_id",
+  "price": 1000
+}
