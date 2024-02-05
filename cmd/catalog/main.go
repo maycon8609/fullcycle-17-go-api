@@ -43,7 +43,7 @@ func main() {
 
 	// product
 	c.Get("/product", webProductHandle.GetProducts)
-	c.Get("/product/{categoryID}", webProductHandle.GetProductsByCategoryID)
+	c.Get("/product/category/{categoryID}", webProductHandle.GetProductsByCategoryID)
 	c.Get("/product/{id}", webProductHandle.GetProduct)
 	c.Post("/product", webProductHandle.CreateProduct)
 
